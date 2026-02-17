@@ -5,22 +5,63 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <title>WXCAST</title>
 </head>
 
 <body>
-  <form>
-    <input class="place-input" placeholder="Enter Place" />
-    <button type="button" class="enter-btn">Enter</button>
-  </form>
-  <div class="container">
-    <div class="location"></div>
-    <div class="icon">---</div>
-    <div class="temp">-°C</div>
-    <div class="summary">----</div>
 
-  </div>
-  <!--Linking the javascript code-->
+  <div class="noise"></div>
+  <div class="grid-overlay"></div>
+
+  <header class="site-header">
+    <span class="logo">WX<em>CAST</em></span>
+    <span class="tagline">atmospheric intelligence</span>
+  </header>
+
+  <main class="main-wrap">
+
+    <form class="search-form">
+      <div class="input-wrap">
+        <label class="input-label" for="place-input">LOCATION</label>
+        <input id="place-input" class="place-input" placeholder="city name…" autocomplete="off" spellcheck="false" />
+      </div>
+      <button type="button" class="enter-btn">
+        <span class="btn-text">GET WEATHER</span>
+        <span class="btn-arrow">→</span>
+      </button>
+    </form>
+
+    <div class="container">
+      <div class="card-top">
+        <div class="location"></div>
+        <div class="icon">
+          <div class="icon-placeholder">〜</div>
+        </div>
+      </div>
+
+      <div class="card-mid">
+        <div class="temp">—°C</div>
+      </div>
+
+      <div class="card-bot">
+        <div class="summary-label">CONDITIONS</div>
+        <div class="summary">—</div>
+      </div>
+
+      <div class="scan-line"></div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <span>LIVE DATA · OPEN WEATHER</span>
+    <span class="blink">●</span>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 
